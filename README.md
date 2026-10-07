@@ -1,63 +1,35 @@
-# TP1 Python — Partie 1
+# TP1 Python - Partie 1
 
-Solutions du TP1 de Python (partie 1) : conversions, structures conditionnelles, boucles, fonctions, listes, tuples et dictionnaires.
+## Contenu du dépôt
 
-## Contenu
+- `TP1python_partie1.ipynb` : le notebook avec les exercices du TP
+- `reponses_TP1.pdf` : le document avec les réponses et les explications
+- `captures/` : les captures d'écran de l'exécution de chaque exercice
+- `pyproject.toml` et `uv.lock` : l'environnement du projet (uv)
 
-| Fichier | Description |
-|---|---|
-| `TP1python_partie1.ipynb` | Le notebook du TP avec les six exercices résolus et leurs sorties |
-| `TP1_python_partie1_explications.pdf` | Le document de réponses : chaque solution expliquée pas à pas (raisonnement, exécutions, pièges) |
-| `captures/` | Les captures du notebook exécuté, une par exercice |
-| `pyproject.toml`, `uv.lock` | L'environnement uv du projet (dépendances et versions figées) |
-
-## Exercices
-
-1. **Système de notation pondérée** — `input()`, `float()`, `int()`, `str()`
-2. **Analyse d'une équation du second degré** — tests imbriqués, booléen, discriminant
-3. **Contrôle de saisie et boucle d'affichage** — `while`, `for`, `range()`
-4. **Traitement des notes** — paramètre par défaut, immuabilité, `map()`, `zip()`
-5. **Saisie ordonnée et médiane** — listes, indices, parité
-6. **Configuration d'un système multi-agents** — dictionnaire, liste et tuples imbriqués
-
-## Environnement (uv)
-
-Le projet est géré avec [uv](https://docs.astral.sh/uv/). Les dépendances sont déclarées dans `pyproject.toml` et figées dans `uv.lock`.
+## Lancer le notebook
 
 ```bash
-uv sync                                          # crée .venv et installe les dépendances
-uv run jupyter notebook TP1python_partie1.ipynb  # lance le notebook dans cet environnement
+uv sync
+uv run jupyter notebook TP1python_partie1.ipynb
 ```
-
-Dans VS Code, sélectionner le noyau `.venv` après `uv sync`.
-
-L'environnement a été créé avec :
-
-```bash
-uv init --bare
-uv add notebook ipykernel
-```
-
-Les exercices 1, 2, 3 et 5 demandent des saisies au clavier. Les sorties déjà enregistrées dans le notebook correspondent aux exemples détaillés dans le PDF.
 
 ## Captures d'écran
 
-Chaque capture montre le code de l'exercice et le résultat de son exécution dans le notebook.
+Exercice 1
+![ex1](captures/ex1_notation_ponderee.png)
 
-### Exercice 1 — Système de notation pondérée
-![Exercice 1](captures/ex1_notation_ponderee.png)
+Exercice 2
+![ex2](captures/ex2_equation_second_degre.png)
 
-### Exercice 2 — Analyse d'une équation du second degré
-![Exercice 2](captures/ex2_equation_second_degre.png)
+Exercice 3
+![ex3](captures/ex3_controle_saisie.png)
 
-### Exercice 3 — Contrôle de saisie et boucle d'affichage
-![Exercice 3](captures/ex3_controle_saisie.png)
+Exercice 4
+![ex4](captures/ex4_traitement_notes.png)
 
-### Exercice 4 — Traitement des notes
-![Exercice 4](captures/ex4_traitement_notes.png)
+Exercice 5
+![ex5](captures/ex5_mediane.png)
 
-### Exercice 5 — Saisie ordonnée et médiane
-![Exercice 5](captures/ex5_mediane.png)
-
-### Exercice 6 — Configuration d'un système multi-agents
-![Exercice 6](captures/ex6_config_multi_agents.png)
+Exercice 6
+![ex6](captures/ex6_config_multi_agents.png)
