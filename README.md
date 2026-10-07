@@ -9,6 +9,7 @@ Solutions du TP1 de Python (partie 1) : conversions, structures conditionnelles,
 | `TP1python_partie1.ipynb` | Le notebook du TP avec les six exercices résolus et leurs sorties |
 | `TP1_python_partie1_explications.pdf` | Le document de réponses : chaque solution expliquée pas à pas (raisonnement, exécutions, pièges) |
 | `captures/` | Les captures du notebook exécuté, une par exercice |
+| `pyproject.toml`, `uv.lock` | L'environnement uv du projet (dépendances et versions figées) |
 
 ## Exercices
 
@@ -19,13 +20,22 @@ Solutions du TP1 de Python (partie 1) : conversions, structures conditionnelles,
 5. **Saisie ordonnée et médiane** — listes, indices, parité
 6. **Configuration d'un système multi-agents** — dictionnaire, liste et tuples imbriqués
 
-## Exécution
+## Environnement (uv)
 
-Ouvrir le notebook dans Jupyter ou VS Code, puis exécuter les cellules dans l'ordre :
+Le projet est géré avec [uv](https://docs.astral.sh/uv/). Les dépendances sont déclarées dans `pyproject.toml` et figées dans `uv.lock`.
 
 ```bash
-pip install notebook
-jupyter notebook TP1python_partie1.ipynb
+uv sync                                          # crée .venv et installe les dépendances
+uv run jupyter notebook TP1python_partie1.ipynb  # lance le notebook dans cet environnement
+```
+
+Dans VS Code, sélectionner le noyau `.venv` après `uv sync`.
+
+L'environnement a été créé avec :
+
+```bash
+uv init --bare
+uv add notebook ipykernel
 ```
 
 Les exercices 1, 2, 3 et 5 demandent des saisies au clavier. Les sorties déjà enregistrées dans le notebook correspondent aux exemples détaillés dans le PDF.
